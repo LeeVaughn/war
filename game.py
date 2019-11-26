@@ -1,7 +1,7 @@
 class Card:
-  suits: ["spades", "hearts", "diamonds", "clubs"]
+  suits = ["spades", "hearts", "diamonds", "clubs"]
   # first two items are None so that index matches card value
-  values: [None, None, "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+  values = [None, None, "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 
   def __init__(self, value, suit):
     """suits and values should be integers"""
@@ -30,5 +30,6 @@ class Card:
         return False
     return False
 
+  # returns the value and suit of the Card object
   def __repr__(self):
     return self.values[self.value] + " of " + self.suits[self.suit]
