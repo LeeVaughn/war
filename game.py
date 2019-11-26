@@ -1,5 +1,6 @@
 class Card:
   suits: ["spades", "hearts", "diamonds", "clubs"]
+  # first two items are None so that index matches card value
   values: [None, None, "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 
   def __init__(self, value, suit):
@@ -7,6 +8,7 @@ class Card:
     self.value = value
     self.suit = suit
 
+  # determines if card is less than opponent's card
   def __lt__(self, other):
     if self.value < other.value:
       return True
@@ -17,6 +19,7 @@ class Card:
         return False
     return False
 
+  # determines if card is greater than opponent's card
   def __gt__(self, other):
     if self.value > other.value:
       return True
