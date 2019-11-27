@@ -50,3 +50,9 @@ class Deck:
     if len(self.cards) == 0:
       return
     return self.cards.pop()
+
+  def Player:
+    def __init__(self, name):
+      self.wins = 0
+      self.card = None
+      self.name = name
